@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zubair Gallery | Modern Creative Image Gallery</title>
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">Zubair <span>Gallery</span></a>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="theme-toggle" title="Toggle Dark/Light Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="hamburger">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="reveal">Modern Creative <span>Image Gallery</span></h1>
+                    <p class="reveal">Explore beautiful collections of nature, technology, and automotive photography.</p>
+                    <div class="hero-btns reveal">
+                        <a href="#gallery" class="btn btn-primary">Explore Gallery</a>
+                        <a href="#categories" class="btn btn-secondary">View Categories</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+        </section>
+
+        <!-- Categories / Filter Section -->
+        <section id="categories" class="filter-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our <span>Collections</span></h2>
+                    <div class="search-container">
+                        <input type="text" id="image-search" placeholder="Search categories or titles...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="nature">Nature</button>
+                    <button class="filter-btn" data-filter="cars">Cars</button>
+                    <button class="filter-btn" data-filter="technology">Technology</button>
+                    <button class="filter-btn" data-filter="animals">Animals</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Images will be generated via JS or hardcoded -->
+                    <!-- Nature -->
+                    <div class="gallery-item" data-category="nature">
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" alt="Misty Forest" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="category-tag">Nature</span>
+                                <h3>Misty Forest</h3>
+                                <button class="view-btn"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="nature">
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80" alt="Sunlit Woods" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="category-tag">Nature</span>
+                                <h3>Sunlit Woods</h3>
+                                <button class="view-btn"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="nature">
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=80" alt="Mountain Peak" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="category-tag">Nature</span>
+                                <h3>Mountain Peak</h3>
+                                <button class="view-btn"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cars -->
+                    <div class="gallery-item" data-category="cars">
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=800&q=80" alt="Classic Muscle" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="category-tag">Cars</span>
+                                <h3>Classic Muscle</h3>
+                                <button class="view-btn"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="cars">
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Modern Supercar" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="category-tag">Cars</span>
+                                <h3>Modern Supercar</h3>
+                                <button class="view-btn"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="cars">
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80" alt="Luxury Interior" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="category-tag">Cars</span>
+                                <h3>Luxury Interior</h3>
+                                <button class="view-btn"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technology -->
+                    <div class="gallery-item" data-category="technology">
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" alt="Future Tech" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="category-tag">Technology</span>
+                                <h3>Future Tech</h3>
+                                <button class="view-btn"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="technology">
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Cyber Hardware" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="category-tag">Technology</span>
+                                <h3>Cyber Hardware</h3>
+                                <button class="view-btn"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="technology">
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="Digital Desk" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="category-tag">Technology</span>
+                                <h3>Digital Desk</h3>
+                                <button class="view-btn"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Animals -->
+                    <div class="gallery-item" data-category="animals">
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&fit=crop&w=800&q=80" alt="Arctic Fox" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="category-tag">Animals</span>
+                                <h3>Arctic Fox</h3>
+                                <button class="view-btn"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="animals">
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=800&q=80" alt="Majestic Lion" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="category-tag">Animals</span>
+                                <h3>Majestic Lion</h3>
+                                <button class="view-btn"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="animals">
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=800&q=80" alt="Cute Puppy" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="category-tag">Animals</span>
+                                <h3>Cute Puppy</h3>
+                                <button class="view-btn"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <div class="lightbox-content">
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <div class="img-container">
+                <img id="lightbox-img" src="" alt="Gallery Image">
+                <div class="lightbox-info">
+                    <h3 id="lightbox-title">Image Title</h3>
+                    <p id="lightbox-category">Category</p>
+                </div>
+            </div>
+            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="back-to-top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">Zubair <span>Gallery</span></a>
+                    <p>Capturing moments and exploring the beauty of our world through a modern creative lens.</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CodeAlpha_ImageGallery. All Rights Reserved.</p>
+                <p>Developed by <span>Zubair</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
